@@ -7,7 +7,6 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.bochackathon_android.R
 import com.example.bochackathon_android.base.BaseFragment
 import com.example.bochackathon_android.databinding.FragmentOnBoardingInfoBinding
-import com.example.bochackathon_android.databinding.FragmentOnboardingWelcomeBinding
 
 class OnBoardingInfoFragment : BaseFragment(R.layout.fragment_on_boarding_info) {
     private val binding: FragmentOnBoardingInfoBinding by viewBinding(
@@ -24,4 +23,5 @@ class OnBoardingInfoFragment : BaseFragment(R.layout.fragment_on_boarding_info) 
             findNavController().navigate(R.id.action_onBoardingInfoFragment_to_onboardingFindCompany)
         }
     }
+
 }

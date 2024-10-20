@@ -7,23 +7,16 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
-const val BASE_URL = "http://192.168.10.52:8888/api/v1/kyb/"
+
+const val BASE_URL = "http://10.1.1.43:8888/api/v1/kyb/"
 const val NETWORK_TAG = "#Network"
+const val TIMEOUT_DURATION = 2L
 
 object RetrofitInstance {
 
     private var apiService: ApiService? = null
 
     fun getApiServiceInstance(): ApiService? {
-//        if (apiService == null) {
-//            apiService = Retrofit.Builder()
-//                .baseUrl(BASE_URL)
-//                .client(this.okHttpClient ?: createNewRegistrationClient())
-//                .addConverterFactory(MoshiConverterFactory.create())
-//                .build()
-//                .create(ApiService::class.java)
-//        }
-//        return apiService
         if (apiService == null) {
             apiService = Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -46,11 +39,11 @@ object RetrofitInstance {
 
     private fun createNewRegistrationClient(): OkHttpClient {
         return OkHttpClient.Builder()
-            .readTimeout(2, TimeUnit.MINUTES)
-            .connectTimeout(2, TimeUnit.MINUTES)
-            .writeTimeout(2, TimeUnit.MINUTES)
-            .callTimeout(2, TimeUnit.MINUTES)
-            .connectTimeout(2, TimeUnit.MINUTES)
+            .readTimeout(TIMEOUT_DURATION, TimeUnit.MINUTES)
+            .connectTimeout(TIMEOUT_DURATION, TimeUnit.MINUTES)
+            .writeTimeout(TIMEOUT_DURATION, TimeUnit.MINUTES)
+            .callTimeout(TIMEOUT_DURATION, TimeUnit.MINUTES)
+            .connectTimeout(TIMEOUT_DURATION, TimeUnit.MINUTES)
             .addInterceptor(loggingInterceptor)
             .build()
 
@@ -58,5 +51,5 @@ object RetrofitInstance {
 }
 
 val loggingInterceptor = HttpLoggingInterceptor().apply {
-    level = HttpLoggingInterceptor.Level.BODY // Set desired logging level
+    level = HttpLoggingInterceptor.Level.BODY
 }

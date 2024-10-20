@@ -27,5 +27,14 @@
         android:id="@+id/onboardingFindCompany"
         android:name="com.example.bochackathon_android.ui.onboarding_find_company.OnboardingFindCompany"
         android:label="fragment_onboarding_find_company"
-        tools:layout="@layout/fragment_onboarding_find_company" />
+        tools:layout="@layout/fragment_onboarding_find_company" >
+        <action
+            android:id="@+id/action_onboardingFindCompany_to_companyInformationFragment"
+            app:destination="@id/companyInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyInformationFragment"
+        android:name="com.example.bochackathon_android.ui.company_information.CompanyInformationFragment"
+        android:label="fragment_company_information"
+        tools:layout="@layout/fragment_company_information" />
 </navigation>
