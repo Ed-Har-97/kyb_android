@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboarding_welcome">
+
+    <fragment
+        android:id="@+id/onboarding_welcome"
+        android:name="com.example.bochackathon_android.ui.onboarding_welcome.OnboardingWelcome"
+        android:label="onboarding_welcome"
+        tools:layout="@layout/fragment_onboarding_welcome" >
+        <action
+            android:id="@+id/action_OnboardingWelcomeFragment_to_onBoardingInfoFragment"
+            app:destination="@id/onBoardingInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingInfoFragment"
+        android:name="com.example.bochackathon_android.ui.onboarding_info.OnBoardingInfoFragment"
+        android:label="fragment_on_boarding_info"
+        tools:layout="@layout/fragment_on_boarding_info" >
+        <action
+            android:id="@+id/action_onBoardingInfoFragment_to_onboardingFindCompany"
+            app:destination="@id/onboardingFindCompany" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFindCompany"
+        android:name="com.example.bochackathon_android.ui.onboarding_find_company.OnboardingFindCompany"
+        android:label="fragment_onboarding_find_company"
+        tools:layout="@layout/fragment_onboarding_find_company" />
+</navigation>

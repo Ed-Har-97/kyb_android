@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_assistant_lbl">Onboarding Assistant</string>
+    <string name="welcome_lbl">Welcome</string>
+    <string name="start_lbl">Start</string>
+    <string name="lets_verified_lbl">Let’s get you verified</string>
+    <string name="follow_the_steps_below_lbl">Follow the steps below</string>
+    <string name="provide_company_details_lbl">Provide company details</string>
+    <string name="provide_company_documents_lbl">Provide company documents</string>
+    <string name="provide_associated_parties_lbl">Provide associated parties</string>
+    <string name="we_will_ask_you_some_questions_lbl">We’ll ask you some questions</string>
+    <string name="continue_lbl">Continue</string>
+    <string name="lets_find_your_company_lbl">Let’s find your company</string>
+</resources>
