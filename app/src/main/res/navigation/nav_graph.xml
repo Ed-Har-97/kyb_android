@@ -36,5 +36,14 @@
         android:id="@+id/companyInformationFragment"
         android:name="com.example.bochackathon_android.ui.company_information.CompanyInformationFragment"
         android:label="fragment_company_information"
-        tools:layout="@layout/fragment_company_information" />
+        tools:layout="@layout/fragment_company_information" >
+        <action
+            android:id="@+id/action_companyInformationFragment_to_companyDocumentsFragment"
+            app:destination="@id/companyDocumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyDocumentsFragment"
+        android:name="com.example.bochackathon_android.ui.company_documents.CompanyDocumentsFragment"
+        android:label="fragment_company_documents"
+        tools:layout="@layout/fragment_company_documents" />
 </navigation>
